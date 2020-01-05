@@ -1,57 +1,31 @@
-const connection = require("./connection.js");
+// Modified from in class "CatsApp" example
+const connection = require("../config/connection.js");
 
-var orm = {
-    // Variable for table name
-    selectAll: function (table, cb) {
-        var queryString = "SELECT * ??;";
-        connection.query(queryString, [table], function (error, result) {
-            if (err) {
-                throw err;
-            }
-            cb(result);
-        });
-    },
-    insertOne: function (table, cols, vals, cb) {
-        var queryString = "INSERT INTO " + table;
-        // From class example: 
-        queryString += " (";
-        queryString += cols.toString();
-        queryString += ") ";
-        queryString += "VALUES (";
-        queryString += printQuestionMarks(vals.length);
-        queryString += ") ";
-
-        console.log(queryString);
-
-        connection.query(queryString, vals, function (err, result) {
-            if (err) {
-                throw err;
-            }
-
-            cb(result);
-        });
-    },
-
-    updateOne: function (table, column, condition, cb) {
-        var queryString = "UPDATE " + table;
-        // From class example: 
-        queryString += " SET ";
-        queryString += objToSql(objColVals);
-        queryString += " WHERE ";
-        queryString += condition;
-
-        console.log(queryString);
+const orm = {
+    selectAll: function (tableName, cb) {
+        const queryString = " SELECT * FROM " + tableName + ";";
         connection.query(queryString, function (err, result) {
-            if (err) {
-                throw err;
-            }
-
+            if (err) throw err;
             cb(result);
-        });
+        })
+    },
 
+    insertOne: function (tableName, column, value, cb) {
+        const queryString = `INSERT INTO ${tableName} (${column}, devoured) VALUES ("${value}", 0);`
+        connection.query(queryString, function (err, result) {
+            if (err) throw err;
+            cb(result)
+        });
+    },
+
+    updateOne: function (tableName, column, condition, value, cb) {
+        const queryString = `UPDATE ${tableName} SET ${column}=${condition} WHERE id=${value};`;
+        connection.query(queryString, function (err, result) {
+            if (err) throw err;
+            cb(result);
+        })
     }
 
-}
+};
 
-
-module.exports = orm; 
+module.exports = orm;

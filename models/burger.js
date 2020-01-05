@@ -1,23 +1,24 @@
-var orm = require("../config/orm.js");
+// Modified from in class "CatsApp" example
+const orm = require("../config/orm.js");
 
-var burger = {
+const burger = {
     selectAll: function (cb) {
         orm.selectAll("burgers", function (res) {
             cb(res);
         });
     },
 
-    insertOne: function (cols, vals, cb) {
-        orm.insertOne("burgers", cols, vals, function (res) {
+    insertOne: function (column, value, cb) {
+        orm.insertOne("burgers", column, value, function (res) {
             cb(res);
-        });
+        })
     },
-    updateOne: function (column, condition, cb) {
-        orm.update("burgers", column, condition, function (res) {
+
+    updateOne: function (id, cb) {
+        orm.updateOne("burgers", "devoured", true, id, function (res) {
             cb(res);
-        });
+        })
     }
 };
-
 
 module.exports = burger;

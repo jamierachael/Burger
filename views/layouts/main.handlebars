@@ -2,20 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
-    <title>Burgers, nom, nom, nom!</title>
-    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
-    <script>
-        // compile the template
-        var template = Handlebars.compile("Handlebars <b>{{doesWhat}}</b>");
-        // execute the compiled template and print the output to the console
-        console.log(template({ doesWhat: "rocks!" }));
-    </script>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+	<title>Nom, Nom, Burger!</title>
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/assets/js/burgers.js"></script>
 </head>
 
 <body>
-    {{{ body }}}
+	{{{ body }}}
 </body>
 
 </html>
