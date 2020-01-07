@@ -1,47 +1,32 @@
 # Eat-Da-Burger!
 ## Homework-11  Eat-Da-Burger! App
 
-* ['Note-Taker - Git Hub'](https://github.com/jamierachael/Employee-Tracker)
-* ['Note-Taker - Git Hub IO'](https://jamierachael.github.io/Employee-Tracker/)
+* ['Note-Taker - Git Hub'](https://github.com/jamierachael/Burger)
+* ['Note-Taker - Git Hub IO'](https://jamierachael.github.io/Burger/)
 * ['Note-Taker - Demo Video'](https://drive.google.com/file/d/1pC4zrSV5mjNco-53R7o2ASgca4cU5OU8/view)
 
 
 ### Summary
-* This project emphasizes the use of using MySql with Inquirer, NodeJs, console.table and several npm  and json packages to render an employee traking app
+* This project emphasizes the use of using MySql, express, express-handle bars to dynamically update a tracking app
 
 ### This project has the following features: 
 * An Server JS document
     * This provides the logic for the client side of the app, in this case, it used the backend through Node JS. 
 * DB Folder
-    * Contains a .SQL files for the Employee database and the Seed file with database values
+    * Contains a .SQL files for the Burger database and the Seed file with database values
 * Package.JSON
     * JSON and NPM packages and dependencies 
 
 ### Psuedo code:  
-* TDesign the following database schema containing three tables:
-* department:
-    * id - INT PRIMARY KEY
-    * name - VARCHAR(30) to hold department name
-* role:
-    * id - INT PRIMARY KEY
-    * title -  VARCHAR(30) to hold role title
-    * salary -  DECIMAL to hold role salary
-    * department_id -  INT to hold reference to department role belongs to
-* employee:
-    * id - INT PRIMARY KEY
-    * first_name - VARCHAR(30) to hold employee first name
-    * last_name - VARCHAR(30) to hold employee last name
-    * role_id - INT to hold reference to role employee has
-    * manager_id - INT to hold reference to another employee that manager of the current employee. This field may be null if the employee has no manager
-* Build a command-line application that at a minimum allows the user to:
-    * Add departments, roles, employees
-    * View departments, roles, employees
-    * Update employee roles
+* Eat-Da-Burger! is a restaurant app that lets users input the names of burgers they'd like to eat.
+* Whenever a user submits a burger's name, your app will display the burger on the left side of the page -- waiting to be devoured.
+* Each burger in the waiting area also has a Devour it! button. When the user clicks it, the burger will move to the right side of the page.
+* Your app will store every burger in a database, whether devoured or not.
 
 ### This project has script features of:
 * Variable declaration area with required entry points
-* Inquirer Promps
-* Switch Statement with several cases
+* express-handlebars templates
+* GET, POST, PUT call back functions 
 * Functions for populating tables
 
 ### This project features responsive design
@@ -52,11 +37,40 @@
 > Open in browser
 
 ### Features: 
-* One JS Page
-    * Server.js
-* One JSON package
-* Node Modules Folder
-* DB folder with two SQL files
+* express-handlebars file directory: 
+
+├── config
+│   ├── connection.js
+│   └── orm.js
+│ 
+├── controllers
+│   └── burgers_controller.js
+│
+├── db
+│   ├── schema.sql
+│   └── seeds.sql
+│
+├── models
+│   └── burger.js
+│ 
+├── node_modules
+│ 
+├── package.json
+│
+├── public
+│   └── assets
+│       ├── css
+│       │   └── burger_style.css
+│       └── img
+│           └── burger.png
+│   
+│
+├── server.js
+│
+└── views
+    ├── index.handlebars
+    └── layouts
+        └── main.handlebars
 
 
 ### Code Validation 
