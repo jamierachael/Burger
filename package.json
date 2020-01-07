@@ -1,10 +1,11 @@
 {
   "name": "burger",
   "version": "1.0.0",
-  "description": "Eat-DA-Burger! App",
-  "main": "index.js",
+  "description": "* ['Note-Taker - Git Hub'](https://github.com/jamierachael/Burger) * ['Note-Taker - Git Hub IO'](https://jamierachael.github.io/Burger/) * ['Note-Taker - Demo Video'](https://drive.google.com/file/d/1pC4zrSV5mjNco-53R7o2ASgca4cU5OU8/view)",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,5 @@
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "mysql": "^2.17.1"
-  },
-  "keywords": []
+  }
 }

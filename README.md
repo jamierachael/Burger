@@ -1,9 +1,9 @@
 # Eat-Da-Burger!
 ## Homework-11  Eat-Da-Burger! App
 
-* ['Note-Taker - Git Hub'](https://github.com/jamierachael/Burger)
-* ['Note-Taker - Git Hub IO'](https://jamierachael.github.io/Burger/)
-* ['Note-Taker - Demo Video'](https://drive.google.com/file/d/1pC4zrSV5mjNco-53R7o2ASgca4cU5OU8/view)
+* ['Eat-Da-Burger! - Git Hub'](https://github.com/jamierachael/Burger)
+* ['Eat-Da-Burger! - Git Hub IO'](https://jamierachael.github.io/Burger/)
+* ['Eat-Da-Burger! - Demo Video'](https://drive.google.com/file/d/1pC4zrSV5mjNco-53R7o2ASgca4cU5OU8/view)
 
 
 ### Summary
