@@ -1,5 +1,10 @@
+// Jamie Morris
+// Homework-11  Eat-Da-Burger!
+
+// Requires mysql
 var mysql = require("mysql");
 
+// Creates connection
 var connection = mysql.createConnection({
   host: "localhost",
   //Port
@@ -12,8 +17,8 @@ var connection = mysql.createConnection({
   database: "burgers_db"
 });
 
-// connection.connect();
 
+// Error handling
 connection.connect(function (err) {
   if (err) throw err;
   console.log("Connected!");

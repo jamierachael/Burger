@@ -1,10 +1,15 @@
+// Jamie Morris
+// Homework-11  Eat-Da-Burger!
 // Modified from in class "CatsApp" example
 
+// Requires Express
 const express = require("express")
+// Creates the router
 const router = express.Router();
-
+// Requires burgers.js
 const burger = require("../models/burger.js");
 
+// GET
 router.get("/", function (req, res) {
     burger.selectAll(function (data) {
 
@@ -16,6 +21,7 @@ router.get("/", function (req, res) {
     });
 });
 
+// POST 
 router.post("/api/burgers", function (req, res) {
     const burgerName = req.body.burger_name;
     burger.insertOne("burger_name", burgerName, function (result) {
@@ -23,10 +29,9 @@ router.post("/api/burgers", function (req, res) {
     });
 });
 
+// PUT 
 router.put("/api/burgers/:id", function (req, res) {
     var condition = "id = " + req.params.id;
-
-    console.log("condition", condition);
 
     burger.updateOne(req.params.id, function (result) {
         if (result.changedRows == 0) {
@@ -37,5 +42,23 @@ router.put("/api/burgers/:id", function (req, res) {
         }
     });
 });
+
+// DELETE
+// Not working 
+// router.delete("/api/burgers/:id", function (req, res) {
+//     var condition = "id = " + req.params.id;
+
+//     console.log(condition);
+
+//     burger.delete(condition, function (result) {
+//         if (result.affectedRows == 0) {
+//             // If no rows were changed, then the ID must not exist, so 404
+//             return res.status(404).end();
+//         } else {
+//             res.status(200).end();
+//         }
+//     });
+
+// });
 
 module.exports = router;

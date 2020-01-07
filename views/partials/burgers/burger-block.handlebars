@@ -1,8 +1,11 @@
+<!-- Jamie Morris - Homework-11  Eat-Da-Burger! -->
 <li>
     {{burger_name}}
     {{#if devoured}}
-    <button class="change-devoured" data-id="{{id}}" data-devoured="{{devoured}}">
-        Have you eaten this burger?
+    <button class="change-devoured btn btn-outline-danger" data-id="{{id}}" data-devoured="{{devoured}}">
+        Eat Me!
+        {{/if}}
     </button>
-    {{/if}}
+    {{!-- not working  --}}
+    {{!-- <button class="delete-burger" data-id="{{id}}">DELETE!</button> --}}
 </li>
