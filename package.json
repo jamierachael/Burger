@@ -1,7 +1,7 @@
 {
   "name": "burger",
   "version": "1.0.0",
-  "description": "weird burger assignment",
+  "description": "Eat-DA-Burger! App",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kylewhittemore/burger.git"
+    "url": "git+https://github.com/jamierachael/Burger.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kylewhittemore/burger/issues"
+    "url": "https://github.com/jamierachael/Burger/issues"
   },
-  "homepage": "https://github.com/kylewhittemore/burger#readme",
+  "homepage": "https://github.com/jamierachael/Burger#readme",
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
