@@ -1,23 +1,25 @@
 // Jamie Morris
 // Homework-11  Eat-Da-Burger!
-var connection;
+
 // Requires mysql
 var mysql = require("mysql");
+
+var connection;
 
 // Creates connection
 if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
   connection = mysql.createConnection({
-    host: "localhost",
+    host: "ctgplw90pifdso61.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     //Port
     port: 3306,
     // Username
-    user: "root",
+    user: "yc7a2rrhzrtwpqir",
     // Password
-    password: "Cheeseme1",
+    password: "li2fndl8246lz1mi",
     // DataBase
-    database: "burgers_db"
+    database: "qs7dcd4dvlzacibl"
   });
 };
 
@@ -27,4 +29,5 @@ connection.connect(function (err) {
   console.log("Connected!");
 });
 
+// Test comment 
 module.exports = connection;
